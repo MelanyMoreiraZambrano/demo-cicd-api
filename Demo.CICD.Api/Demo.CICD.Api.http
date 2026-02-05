@@ -1,0 +1,67 @@
+# Archivo de pruebas HTTP para Demo.CICD.Api
+# Usar con la extensión REST Client de VS Code o ejecutar con dotnet run
+
+### Variables
+@baseUrl = http://localhost:5000
+@dockerUrl = http://localhost:8080
+
+### 1. Health Check (Local)
+GET {{baseUrl}}/health
+Accept: application/json
+
+###
+
+### 2. Health Check (Docker)
+GET {{dockerUrl}}/health
+Accept: application/json
+
+###
+
+### 3. Ping Endpoint (Local)
+GET {{baseUrl}}/api/v1/ping
+Accept: application/json
+
+###
+
+### 4. Ping Endpoint (Docker)
+GET {{dockerUrl}}/api/v1/ping
+Accept: application/json
+
+###
+
+### 5. Version Info (Local)
+GET {{baseUrl}}/version
+Accept: application/json
+
+###
+
+### 6. Version Info (Docker)
+GET {{dockerUrl}}/version
+Accept: application/json
+
+###
+
+### 7. Swagger UI (Local)
+GET {{baseUrl}}/swagger
+Accept: text/html
+
+###
+
+### 8. Swagger UI (Docker)
+GET {{dockerUrl}}/swagger
+Accept: text/html
+
+###
+
+### 9. OpenAPI JSON (Local)
+GET {{baseUrl}}/swagger/v1/swagger.json
+Accept: application/json
+
+###
+
+### 10. OpenAPI JSON (Docker)
+GET {{dockerUrl}}/swagger/v1/swagger.json
+Accept: application/json
+
+###
+
