@@ -1,6 +1,6 @@
 services:
   api:
-    image: ghcr.io/USUARIO_GH/demo-cicd-api:latest
+    image: ghcr.io/melanymoreirazambrano/demo-cicd-api:latest
     container_name: demo-cicd-api
     ports:
       - "8080:8080"
